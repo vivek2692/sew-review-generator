@@ -127,24 +127,56 @@ function App() {
     }
   }
 
-  async function openGoogle() {
-    if (!GOOGLE_REVIEW_URL) return;
-    const tab = window.open(GOOGLE_REVIEW_URL, "_blank");
-    if (tab) tab.opener = null;
-    const ok = await copyReview();
-    if (!tab) {
-      setMessage({
-        kind: "info",
-        text: ok
-          ? "Review copied, but your browser blocked the new tab. Allow pop-ups or open the shop's Google review link from the shop."
-          : "Your browser blocked the new tab and clipboard access. Copy the text manually and open the shop's Google review page.",
-      });
-    } else if (!ok) {
-      setMessage({ kind: "info", text: "Google Reviews opened. Copy the review text manually before submitting." });
-    } else {
-      setMessage({ kind: "success", text: "Review copied and Google Reviews opened in a new tab. Paste, review, and submit it yourself." });
+  
+async function openGoogle() {
+  if (!GOOGLE_REVIEW_URL) return;
+
+  // Start copying while the mobile tap is still active.
+  let copyPromise: Promise<void>;
+
+  try {
+    if (!navigator.clipboard?.writeText) {
+      throw new Error("Clipboard unavailable");
     }
+    copyPromise = navigator.clipboard.writeText(review);
+  } catch {
+    copyPromise = Promise.reject(new Error("Clipboard unavailable"));
   }
+
+  // Open Google Reviews from the same tap.
+  const tab = window.open(GOOGLE_REVIEW_URL, "_blank");
+  if (tab) tab.opener = null;
+
+  let ok = false;
+
+  try {
+    await copyPromise;
+    ok = true;
+    setCopied(true);
+  } catch {
+    setCopied(false);
+  }
+
+  if (!tab) {
+    setMessage({
+      kind: "info",
+      text: ok
+        ? "Review copied! Your browser blocked Google Reviews from opening. Open the shop's review page manually and paste your review."
+        : "Your browser blocked copying or opening a new tab. Tap Copy review, then open Google Reviews and paste your text."
+    });
+  } else if (!ok) {
+    setMessage({
+      kind: "info",
+      text: "Google Reviews opened, but automatic copying was blocked. Return to this page, tap Copy review, then paste your review."
+    });
+  } else {
+    setMessage({
+      kind: "success",
+      text: "Review copied! Google Reviews opened. Paste your review, check that it reflects your experience, and submit it yourself."
+    });
+  }
+}
+
 
   return (
     <div className="app-shell">
