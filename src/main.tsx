@@ -21,7 +21,6 @@ function App() {
   const [selected, setSelected] = useState<string[]>([]);
   const [review, setReview] = useState("");
   const [source, setSource] = useState<ResultSource | null>(null);
-  const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState<{ kind: "success" | "error" | "info"; text: string } | null>(null);
   const [copied, setCopied] = useState(false);
   const requestId = useRef(0);
@@ -43,7 +42,6 @@ function App() {
       requestId.current += 1;
       activeController.current?.abort();
       activeController.current = null;
-      setBusy(false);
       setMessage({ kind: "info", text: "Select a category to create a review draft." });
     }
   }
@@ -58,7 +56,6 @@ function App() {
     const controller = new AbortController();
     activeController.current = controller;
 
-    setBusy(true);
     setMessage(null);
     setCopied(false);
 
@@ -100,7 +97,6 @@ function App() {
     } finally {
       window.clearTimeout(timer);
       if (thisRequestId === requestId.current) {
-        setBusy(false);
         activeController.current = null;
       }
     }
