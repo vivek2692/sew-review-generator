@@ -1,0 +1,9 @@
+name = "sew-review-generator-api"
+main = "worker/src/index.ts"
+compatibility_date = "2026-10-29"
+workers_dev = true
+
+[vars]
+GEMINI_MODEL = "gemini-2.5-flash-lite"
+# Set ALLOWED_ORIGIN to the deployed Pages origin if the API is hosted separately.
+# Keep the API same-origin via Pages Functions or a route in production when possible.

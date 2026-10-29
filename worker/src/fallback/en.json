@@ -1,0 +1,98 @@
+{
+  "product_quality": [
+    "The product quality feels good and the finish is neat.",
+    "I like the overall quality of this sewing machine.",
+    "The machine feels well made and nicely finished.",
+    "The quality seems good for everyday sewing needs.",
+    "The product has a solid feel and a clean finish.",
+    "I am pleased with the quality of the machine.",
+    "The build and finish look good to me.",
+    "The machine seems thoughtfully put together.",
+    "The overall product quality has been satisfying.",
+    "A good-quality product with a neat finish."
+  ],
+  "value_for_money": [
+    "This feels like good value for the money.",
+    "The price feels reasonable for what you get.",
+    "I feel the product offers good value.",
+    "A sensible option for the price.",
+    "The machine seems worth considering for its price.",
+    "I am happy with the value this product offers.",
+    "It feels like a fair balance of price and quality.",
+    "Good value for someone looking for a practical machine.",
+    "The product feels worth the amount spent.",
+    "Overall, the value for money seems good."
+  ],
+  "sewing_performance": [
+    "The machine sews well for my needs.",
+    "I am happy with how the machine performs while sewing.",
+    "The sewing performance feels smooth and steady.",
+    "It does the sewing work I need it to do.",
+    "The machine has been performing well for my use.",
+    "I like the way it handles everyday sewing tasks.",
+    "The sewing experience has been good so far.",
+    "It works well for the kind of sewing I need.",
+    "The machine gives a satisfying sewing experience.",
+    "I am pleased with its general sewing performance."
+  ],
+  "ease_of_use": [
+    "The machine feels easy to use.",
+    "Getting familiar with the machine feels straightforward.",
+    "I find the controls simple to understand.",
+    "It feels manageable for regular sewing.",
+    "The machine is convenient to use for my needs.",
+    "I like that using the machine feels uncomplicated.",
+    "The overall operation seems easy to follow.",
+    "It is comfortable to work with.",
+    "The machine feels user-friendly.",
+    "It seems simple to get started with this machine."
+  ],
+  "features_design": [
+    "The design is practical and the features are useful.",
+    "I like the machine design and its features.",
+    "The features seem helpful for everyday sewing.",
+    "The design feels neat and functional.",
+    "It has a practical design that suits my needs.",
+    "I appreciate the useful features on this machine.",
+    "The overall design is simple and appealing.",
+    "The features and layout feel thoughtfully arranged.",
+    "I like the balance of design and functionality.",
+    "The machine has a clean design and useful options."
+  ],
+  "product_variety": [
+    "There is a good range of sewing machines to consider.",
+    "I liked having different machine options to compare.",
+    "The product variety makes it easier to explore choices.",
+    "There are several options for different needs.",
+    "I appreciate the selection of sewing machines available.",
+    "The range gives customers options to think about.",
+    "It was useful to see different types of machines.",
+    "The available variety is helpful when choosing.",
+    "There are choices for different sewing preferences.",
+    "I liked being able to consider a range of products."
+  ],
+  "shop_service": [
+    "The shop service was pleasant and helpful.",
+    "The staff interaction felt respectful and welcoming.",
+    "I had a good experience with the shop team.",
+    "The service felt friendly and straightforward.",
+    "The staff were courteous during my visit.",
+    "I appreciated the helpful approach at the shop.",
+    "The shop team made the interaction comfortable.",
+    "The service was good and the staff were polite.",
+    "I felt welcomed during my visit to the shop.",
+    "The overall service experience was positive."
+  ],
+  "purchase_experience": [
+    "The overall buying experience was smooth.",
+    "I had a pleasant experience while shopping here.",
+    "The purchase process felt simple and comfortable.",
+    "My overall experience at the shop was good.",
+    "The buying experience was straightforward.",
+    "I am satisfied with my shopping experience.",
+    "The visit and purchase process went well.",
+    "It was a comfortable experience shopping here.",
+    "The overall purchase experience was positive.",
+    "I found the buying process easy to follow."
+  ]
+}
